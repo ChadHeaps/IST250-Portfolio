@@ -1,0 +1,125 @@
+body{
+    background-color: rgb(158, 230, 212);
+}
+
+.pageLayout{
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-rows: auto 1fr 1fr auto;
+    grid-template-areas: 
+    "header header header" 
+    "aside content1 content1" 
+    "aside content2 content3" 
+    "footer footer footer";
+}
+
+.pageLayout > header{
+    grid-area: header;
+    text-align: center;
+    background-color: rgb(146, 209, 193);
+    padding: 15px;
+    border-radius: 15px;
+    border: solid black 1px;
+}
+
+.pageLayout > header > h1{
+    animation-name: headingAnimation;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.pageLayout > aside{
+    grid-area: aside;
+    background-color: rgb(146, 209, 193);
+    border-radius: 15px;
+    font-size: 15px;
+    margin-top: 10px;
+    text-align: center;
+    border: solid black 1px;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    padding-bottom: 15px;
+}
+
+a:hover{
+    transition: transform 0.3s;
+    transform: scale(1.2);
+}
+
+.pageLayout > .content1{
+    grid-area: content1;
+    background-color: rgb(146, 209, 193);
+    border-radius: 15px;
+    margin-top: 10px;
+    margin-left: 10px;
+    text-align: center;
+    border: solid black 1px;
+}
+
+.pageLayout > .content1 > h2{
+    font-size: 35px;
+}
+
+.pageLayout > .content1 > img{
+    width: 120px;
+    margin-bottom: 20px;
+}
+
+.pageLayout > .content1 > img:hover{
+    transform: rotate(10deg) skewY(-15deg);
+    transition: transform 0.3s;
+}
+
+.pageLayout > .content2{
+    grid-area: content2;
+    background-color: rgb(146, 209, 193);
+    border-radius: 15px;
+    margin-top: 10px;
+    margin-left: 10px;
+    text-align: center;
+    border: solid black 1px;
+}
+
+.pageLayout > .content2 > img{
+    width: 120px;
+    filter: grayscale(100%);
+}
+
+.pageLayout > .content3{
+    grid-area: content3;
+    background-color: rgb(146, 209, 193);
+    border-radius: 15px;
+    margin-top: 10px;
+    margin-left: 10px;
+    text-align: center;
+    border: solid black 1px;
+}
+
+.pageLayout > .content3 > img{
+    width: 150px;
+    filter: contrast(120%);
+}
+
+.pageLayout > footer{
+    grid-area: footer;
+    background-color: rgb(146, 209, 193);
+    border-radius: 15px;
+    text-align: center;
+    margin-top: 10px;
+    border: solid black 1px;
+}
+
+@keyframes headingAnimation{
+    0% {
+    transform: translateX(625px);
+}
+
+    100% {
+        transform: translateX(-625px);
+    }
+}
