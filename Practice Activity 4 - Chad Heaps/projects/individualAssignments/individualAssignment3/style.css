@@ -1,0 +1,101 @@
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: seagreen;
+}
+
+header {
+    text-align: center;
+    background-color: lightgreen;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+header > img {
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+}
+
+header > h1 {
+    font-size: 40px;
+}
+
+.photoGallery {
+    margin-top: 50px;
+    background-color: lightgreen;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.photoItem {
+    margin-bottom: 25px;
+    background-color: rgb(140, 224, 140);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.photoItem > img {
+    width: 350px;
+    max-width: 250px;
+    height: 250px;
+    border-radius: 10px;
+}
+
+footer {
+    margin-top: 30px;
+    background-color: lightgreen;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.hiddenMapSize {
+    display: none;
+}
+
+@media all and (max-width: 800px) {
+    .photoItem {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .photoItem > img {
+        width: 150px;
+        height: 150px;
+    }
+
+    #footText {
+        display: none;
+    }
+
+    .hiddenMapSize {
+        display: none;
+    }
+}
+
+@media all and (max-width: 600px) {
+    .photoGallery {
+        display: none;
+    }
+
+    .bottomBanner {
+        display: none;
+    }
+
+    .hiddenMapSize {
+        display: block;
+        text-align: center;
+        background-color: lightgreen;
+        border-radius: 10px;
+        padding: 10px;
+        margin-top: 25px;
+    }
+
+    .hiddenMapSize > img {
+        width: 350px;
+        height: 250px;
+    }
+}

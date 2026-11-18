@@ -1,0 +1,76 @@
+:root{
+    --text: rgb(94, 91, 91);
+    --backGround: rgb(234, 229, 229);
+    --box: rgb(226, 223, 223);
+}
+
+body {
+    background-color: var(--backGround);
+}
+
+/* Top Section */
+#header {
+    background-color: var(--box);
+    display: block;
+    width: 50%;
+    text-align: center;
+    margin: auto;
+    padding: 3px  70px;
+    border-radius: 20px;
+    border: 2px var(--text) solid;
+}
+
+#header > h1 {
+    font-size: 80px; 
+    font-family:sans-serif;
+    color: var(--text);
+}
+
+#header > p {
+    font-size: 35px;
+    font-family: sans-serif;
+    color: var(--text);
+}
+
+
+/* Body Section */
+#mainBody {
+    background-color: var(--box);
+    display: block;
+    width: 50%;
+    text-align: center;
+    margin: 20px auto;
+    padding: 3px  70px;
+    border-radius: 20px; 
+    border: 2px var(--text) solid;
+}
+
+#mainBody > h2 {
+    font-size: 40px; 
+    font-family:sans-serif;
+    color: var(--text);
+}
+
+label {
+    display: block;
+    font-size: 28px; 
+    font-family:sans-serif;
+    color: var(--text);
+    margin-top: 20px;
+    margin-bottom: 6px;
+}
+
+input[type="text"], select{
+    font-size: 22px;
+    color: var(--text);
+}
+
+input[type="submit"]{
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 10px 25px;
+    font-size: 25px;
+    color: var(--text);
+    background-color: var(--box);
+}
